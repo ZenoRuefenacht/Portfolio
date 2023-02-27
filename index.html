@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Zeno Rüfenacht</title>
+  <link rel="icon" href="./images/logo_zr.png" type="image/x-icon">
+  <!-- ===== CSS Files ===== -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/skins/color-1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- ====== Style Switcher ====== -->
+  <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+  <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+  <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+  <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+  <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+  <link rel="stylesheet" href="css/style-switcher.css">
+</head>
+
+<body>
+  <div class="shortcuts" class="btn" onclick="toggleOverlay('overlay20')">
+    Kurzbefehle
+  </div>
+  <div id="overlay20" style="display:none;" onclick="toggleOverlay('overlay20')">
+    <div class="overlay-card">
+      <h1>
+        Kurzbefehle
+      </h1>
+      <p>n &xrarr; welchseln zwischen Dark und Lightmode <br>
+        r &xrarr; Seite neu laden
+      </p>
+    </div>
+  </div>
+  <!-- ===== Main Container Start ===== -->
+  <div class="main-container">
+    <!-- ===== Aside Start ===== -->
+    <div class="aside">
+      <div class="logo">
+        <a href=""><img src="images/logo_zr.png" alt="Logo Zeno Rüfenacht"></a>
+      </div>
+      <div class="nav-toggler">
+        <span></span>
+      </div>
+      <nav>
+        <ul class="nav">
+          <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
+          <li><a href="#about"><i class="fa fa-user"></i> Über</a></li>
+          <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+          <li><a href="#contact"><i class="fa fa-comments"></i>Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- ===== Aside End ===== -->
+    <!-- ===== Main Content Start ===== -->
+    <div class="main-content">
+      <!-- ===== Home Section Start ===== -->
+      <section class="home active section" id="home">
+        <div class="container">
+          <div class="row">
+            <div class="home-info padd-15">
+              <h3 class="hello">Hallo, mein Name ist <span class="name">Zeno Rüfenacht</span></h3>
+              <h3 class="my-profession">Ich bin ein <span class="typing">web designer</span></h3>
+              <p>Ich bin Mediamatiker, der gerade seine Lehre bei Belimo begonnen hat. Ich bin sehr glücklich, dass ich
+                meine Ausbildung zum Mediamatiker bei Belimo machen kann. Ich denke, ich habe den richtigen Beruf für
+                mich gefunden, denn es sehr viel Spass macht, die Aufträge zu gestalten.</p>
+              <a href="Infografik.pdf" download="cv_zeno_ruefenacht.pdf" class="btn">Download CV</a>
+            </div>
+            <div class="home-img padd-15">
+              <img src="images/portrait.png" alt="Portrait von Zeno Rüfenacht">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Home Section End ===== -->
+      <!-- ===== About Section Start ===== -->
+      <section class="about section" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Über mich</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="about-content padd-15">
+              <div class="row">
+                <div class="about-text padd-15">
+                  <h3>Ich bin Zeno Rüfenacht und mache eine <span>Lehere als Mediamatiker</span></h3>
+                  <p>Meine Arbeit als Medientechniker macht mir sehr viel Spaß. Ich bin derzeit im ersten Lehrjahr und
+                    mache noch die ich mache noch die Grundausbildung im ZLI. Erst im nächsten Lehrjahr werde ich zu
+                    Belimo gehen und darauf freue ich mich schon sehr. Ich bin sehr gespannt auf die Aufgaben, die ich
+                    bekommen werde und auch wie es wie es ist, richtige Aufträge zu erstellen, die auch wirklich
+                    gebraucht werden.
+
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="personal-info padd-15">
+                  <div class="row">
+                    <div class="info-item padd-15">
+                      <p>Geburtstag : <span>17 jan 2007</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p>Alter : <span>16</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p>Website : <span>www.zeno-ruefenacht.com</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p>Email : <span>mail@zeno-ruefenacht.com</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p>Telefon : <span>+41 76 204 33 67</span></p>
+                    </div>
+                    <div class="info-item padd-15">
+                      <p>Stadt : <span>Zürich</span></p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="buttons padd-15">
+                      <a href="#contact" data-section-index="1" class="btn hire-me">Kontaktiere mich</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="skills padd-15">
+                  <div class="row">
+                    <div class="skill-item padd-15">
+                      <h5>HTML</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 75%;"></div>
+                        <div class="skill-percent">75%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                      <h5>CSS</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 70%;"></div>
+                        <div class="skill-percent">70%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                      <h5>JS</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 35%;"></div>
+                        <div class="skill-percent">35%</div>
+                      </div>
+                    </div>
+                    <div class="skill-item padd-15">
+                      <h5>PHP</h5>
+                      <div class="progress">
+                        <div class="progress-in" style="width: 5%;"></div>
+                        <div class="skill-percent">5%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== About Section End ===== -->
+
+      <!-- ===== Portfolio Section Start ===== -->
+      <section class="portfolio section" id="portfolio">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Portfolio</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="portfolio-heading padd-15">
+              <h2>Marketing & Diverses</h2>
+            </div>
+          </div>
+          <div class="row">
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay1')">
+                  <img src="images/portfolio/Preview/apineed.jpg" alt="Preview CD Alpineed">
+                  <div class="middle">
+                    <p class="portfolio-text">CD für Alpineed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay1" style="display:none;" onclick="toggleOverlay('overlay1')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Alpineed CD</span> <br> <br>
+                  Bei diesem Auftrag mussten wir ein CD für eine erfundene Firma gestalten. Ich bin nicht ganz fertig
+                  geworden, denn ich habe zu viel Zeit damit verbracht, das Logo und die Farben zu definieren und
+                  gestalten, deshalb bin ich nicht ganz fertig geworden, aber das, was ich hatte, sieht meiner Meinung
+                  sehr gut aus.
+
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Marketing diverses/CD_manual_Alpineed.pdf"></object>
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay2')">
+                  <img src="images/portfolio/Preview/ergonomie.jpg" alt="Preview Ergonomie Präsentation">
+                  <div class="middle">
+                    <p class="portfolio-text">Präsentation über Ergonomie</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay2" style="display:none;" onclick="toggleOverlay('overlay2')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Präsentation Ergonomie</span> <br><br>
+                  Diese Präsentation habe ich mit hilfe von ein paar Kolleginnen und Kollegen kreiert. Wir mussten eine
+                  Präsentation über ein vorgegebenes Thema machen und wir haben Ergonomie bekommen. Es war mir noch ein
+                  bisschen unangenehm, denn ich kannte alle anderen nicht, das hat mich verunsichert.
+
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Marketing diverses/ergonomie_praesentation.pdf"></object>
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay3')">
+                  <img src="images/portfolio/Preview/brief.jpg" alt="Preview Geschäftsbrief">
+                  <div class="middle">
+                    <p class="portfolio-text">Geschaeftsbrief</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay3" style="display:none;" onclick="toggleOverlay('overlay3')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Geschäftsbrief</span> <br><br>
+                  Hier mussten wir einen Geschäftsbrief designen. Das hat mir weniger Spas gemacht, aber es war eine
+                  gute Erfahrung, denn wir mussten das mit Word erstellen. Da habe ich einige neue Sachen gelernt, die
+                  ich noch nicht gewusst habe.
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Marketing diverses/Geschaeftsbrief.pdf"></object>
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay4')">
+                  <img src="images/portfolio/Preview/livestream.jpg" alt="Preview Livestreamingdienste Präsentation">
+                  <div class="middle">
+                    <p class="portfolio-text">Präsentation über Livestreamingdienste</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay4" style="display:none;" onclick="toggleOverlay('overlay4')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Präsentation Livestreamingdienste</span> <br><br>
+                  Hier mussten wir zu zweit einen Vortrag über ein ausgewähltes der vorgegebenen Themen halten. Ich und
+                  mein Grupprnpartner haben uns für das thema Livestreamingdienste entscfhieden. Ich hatte schon ein
+                  bisschen Erfahrung mit livestreamingdienste also im sinne von ich habe mich mal damit beschäftigt und
+                  auch mal ausprobiert selber live zu gehen und irgendwas zu streamen.
+
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Marketing diverses/Livestreaming Dienste.pdf"></object>
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay5')">
+                  <img src="images/portfolio/Preview/konzept.jpg" alt="Preview Marketingkonzept">
+                  <div class="middle">
+                    <p class="portfolio-text">Marketingkonzept</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay5" style="display:none;" onclick="toggleOverlay('overlay5')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Marketingkonzept</span> <br><br>
+                  Bei diesem Auftrag mussten wir zu zweit eine Sportart Erfinden mit allem drum und dran also mit CD
+                  Logo etc. Ausserdem mussten wir eine präsentation vorbereiten wo wir unsere sportart vorstellen. Mir
+                  hat das spass gemacht, eine Firma zu erfinden.
+
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Marketing diverses/RythmRun.pdf"></object>
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay6')">
+                  <img src="images/portfolio/Preview/tips-triks.jpg" alt="Preview Präsentationstipps">
+                  <div class="middle">
+                    <p class="portfolio-text">Tipps und Tricks für eine Präsentation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay6" style="display:none;" onclick="toggleOverlay('overlay6')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Präsentationstipps</span> <br><br>
+                  Hier weiss ich das ist nicht meine beste Arbeit, denn ich hatte keine zeit mehr. Dieser auftrag war
+                  einer von 5 denke ich und ich habe mir einfach zu viel zeit für die anderen genommen und hatte einfach
+                  keine zeit mehr für diesen.
+
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Marketing diverses/Tips_Tricks_Präsentationen.pdf"></object>
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <div class="portfolio-heading padd-15">
+              <h2>Grafik & Illustration</h2>
+            </div>
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay7')">
+                  <img src="images/portfolio/Preview/datenvisualisierung.jpg" alt="Preview Datenvisualisierung">
+                  <div class="middle">
+                    <p class="portfolio-text">Datenvisualisierung</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay7" style="display:none;" onclick="toggleOverlay('overlay7')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Datenvisualisierung</span> <br><br>
+                  Ich habe mir hier überlegt ich mache so Programmfenster wo hat die verschiedenen daten viesuell
+                  dargestellt werden. Ich habe mir auch überlegt das es vielleicht so ausehen sollte als ob die
+                  viesualisierung ein Ladebalken dahrstellt oder was ähnliches.
+
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Grafik illustation/Datenvisualisierung.pdf"></object>
+
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay8')">
+                  <img src="images/portfolio/Preview/farbkomposition.jpg" alt="Preview Farbkomposition">
+                  <div class="middle">
+                    <p class="portfolio-text">Farbkomposition</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay8" style="display:none;" onclick="toggleOverlay('overlay8')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Farbkomposition</span> <br><br>
+                  Hier habe ich eine richtig gute Webseite gefunden die die Farben zusammenstellt die gut zusammen
+                  passen. Das hat mir sehr geholfen die Farben zu finden. Die Illustation habe ich nachgemacht von
+                  Pinterest, ich habe mich dort inspirieren lassen.
+
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Grafik illustation/Digital.pdf"></object>
+
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay9')">
+                  <img src="images/portfolio/Preview/font-image.jpg" alt="Preview Font-Image">
+                  <div class="middle">
+                    <p class="portfolio-text">Font-Image</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay9" style="display:none;" onclick="toggleOverlay('overlay9')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Font-Image</span> <br><br>
+                  Bei diesem Auftrag wollte ich etwas ausprobieren, diesen 3D Efekt wenn ein Teil des Bildes über zum
+                  Beispiel die Schrift oder halt was anders geht. Also habe ich das ausprobiert und schnell gem,ersk
+                  dass es zeit und konzentration braucht aber vorallem genauikeit.
+
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Grafik illustation/Font_images.pdf"></object>
+
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay10')">
+                  <img src="images/portfolio/Preview/mookup.jpg" alt="Preview Mock-Up">
+                  <div class="middle">
+                    <p class="portfolio-text">Mock-up</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay10" style="display:none;" onclick="toggleOverlay('overlay10')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Mook-up</span> <br><br>
+                  Bei diesem Auftrag hatten wir die Aufgabe einen Onlineshop zu gestallten. Den haben wir auf Adobe XD
+                  verwirklicht. Ich habe eine alte Idee von mir verwendet das man so die verschiedenen Kaffearten
+                  jeweils einer morgentlichen Stimmung benennt.
+
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Grafik illustation/Mock-Up.pdf"></object>
+
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay11')">
+                  <img src="images/portfolio/Preview/transformation.jpg" alt="Preview Transformation">
+                  <div class="middle">
+                    <p class="portfolio-text">Transformation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay11" style="display:none;" onclick="toggleOverlay('overlay11')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Transformation</span> <br><br>
+                  Mit diesem Auftrag bin ich überhaubt nicht zufriden. Ich hatte einfach zu wenig Zeit und Keine Idee
+                  und deshalb hatte ich nicht viel Zeit für die Idee die mir dann mal in denn Sinn gekommen ist.
+
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Grafik illustation/Transformation.pdf"></object>
+
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay12')">
+                  <img src="images/portfolio/Preview/Bildkomposition.jpg" alt="Preview Bildkomposition">
+                  <div class="middle">
+                    <p class="portfolio-text">Bildkomposition</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay12" style="display:none;" onclick="toggleOverlay('overlay12')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Bildkomposition</span> <br><br>
+                  Auf diesen Auftrag bin ich stolz, weil ich finde ich habe es richtig gut hinbekommen. Ich habe die
+                  idee mal auf Youtube gesehen und habe mir gedacht ich versuche es mal. Ich habe die Bilder vom
+                  Tutorial und habe es dan gemacht.
+                </p>
+                <img src="./images/portfolio/Grafik illustation/Bildkomposition.jpg" alt="Bildkomposition">
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <div class="portfolio-heading padd-15">
+              <h2>Weekly</h2>
+            </div>
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay13')">
+                  <img src="images/portfolio/Preview/vorlage-previewbilder.jpg" alt="Preview 5 Minuten Skizzen">
+                  <div class="middle">
+                    <p class="portfolio-text">5 Minuten Skizzen</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay13" style="display:none;" onclick="toggleOverlay('overlay13')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">5 Minuten Skizzen</span> <br><br>
+                  Die 5 Minuten Skizzen haben wir immer wider gemacht eigentlich Wöchentlich. Ich mochte die nicht
+                  besonders denn ich bin nicht so gut im Zeichnen von Hand.
+
+                </p>
+                <div class="images">
+                  <img src="./images/portfolio/Weekly/5min_skizzen_Blindzeichnen.jpeg" alt="5 Minuten Skizzen 1">
+                  <img src="./images/portfolio/Weekly/cdv_photo_1665132761_20221007105222.jpg"
+                    alt="5 Minuten Skizzen 2">
+                  <img src="./images1/portfolio/Weekly/cdv_photo_1665132770_20221007105217.jpg"
+                    alt="5 Minuten Skizzen 3">
+                  <img src="./images/portfolio/Weekly/cdv_photo_1667552477_20221104100159.jpg"
+                    alt="5 Minuten Skizzen 4">
+                </div>
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay14')">
+                  <a href="./images/portfolio/Weekly/wochenberichte/kw_38_2022.html" target="_blank"><img
+                      src="images/portfolio/Preview/wochenberichtkw38.jpg" alt="Preview Wochenbericht KW 38"></a>
+                  <div class="middle">
+                    <p class="portfolio-text">Wochenbericht KW 38</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <a href="./images/portfolio/Weekly/wochenberichte/kw_49_2022.html" target="_blank"> <img
+                      src="images/portfolio/Preview/wochenberichtkw49.jpg" alt="Preview Wochenbericht KW 49"></a>
+                  <div class="middle">
+                    <p class="portfolio-text">Wochenbericht KW 49</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <div class="portfolio-heading padd-15">
+              <h2>Eigene Arbeiten</h2>
+            </div>
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay14')">
+                  <img src="images/portfolio/Preview/computerlogo.jpg" alt="Preview Logo Wochenbericht">
+                  <div class="middle">
+                    <p class="portfolio-text">Logo für Wochenbericht</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="overlay14" style="display:none;" onclick="toggleOverlay('overlay14')">
+              <div class="overlay-card">
+                <p class="overlay-text">
+
+                  <span class="overlay-title">Logo für Wochenbericht</span> <br><br>
+                  Ich hatte mal förig Zeit und habe gedacht meine Wochenbericht Seite bracuht ein Upgrade und habe
+                  gedacht ich mache ein animiertes Logo. Ich wollte auch was von mir einbringen also habe ich eine
+                  Computer genommen. Ich habe dann noch HTML Code so runterlaufen lassen und eine Crash am schluss und
+                  das wars.
+
+                </p>
+                <object width="60%" type="application/pdf"
+                  data="./images/portfolio/Eigene Arbeiten/Comuterlogo.pdf"></object>
+
+              </div>
+            </div>
+            <!-- ====== portfolio item End ====== -->
+            <!-- ====== portfolio item start ====== -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img" onclick="toggleOverlay('overlay15')">
+                  <img src="images/portfolio/Preview/canonbroschuere.jpg" alt="Preview Canon Broschüre">
+                  <div class="middle">
+                    <p class="portfolio-text">Broschüre</p>
+                    <div>
+                    </div>
+                  </div>
+                </div>
+                <div id="overlay15" style="display:none;" onclick="toggleOverlay('overlay15')">
+                  <div class="overlay-card">
+                    <p class="overlay-text">
+
+                      <span class="overlay-title">Broschüre</span> <br><br>
+                      Diese Broschüre haben ich und ein Kollege im Homeoffice gamacht. Wir haben gut gestartet und sind
+                      schnell vorangekommen aber unser erster Entwurf war nicht lesbar, wir haben alle schriften mit Rot
+                      umramt und man konnte nichts lesen also haben wir uns dann einfach dafür entschieden die Schrift
+                      weiss zu lassen.
+                    </p>
+                    <object width="60%" type="application/pdf"
+                      data="./images/portfolio/Eigene Arbeiten/Broschüre Canon EOS 90d.pdf"></object>
+                  </div>
+                </div>
+                <!-- ====== portfolio item End ====== -->
+              </div>
+            </div>
+      </section>
+      <!-- ===== Portfolio Section End ===== -->
+      <!-- ===== Contact Section Start ===== -->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Kontaktiere mich</h2>
+            </div>
+          </div>
+          <h3 class="contact-title padd-15">Have You Any Questions ?</h3>
+          <div class="row">
+            <!-- ===== Contact info item start ====== -->
+            <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-phone"></i></div>
+              <h4>Rufe mich an</h4>
+              <p>+41 76 204 33 67</p>
+            </div>
+            <!-- ===== Contact info item end ====== -->
+            <!-- ===== Contact info item start ====== -->
+            <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+              <h4>Stadt</h4>
+              <p>Zürich</p>
+            </div>
+            <!-- ===== Contact info item end ====== -->
+            <!-- ===== Contact info item start ====== -->
+            <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-envelope"></i></div>
+              <h4>Email</h4>
+              <p>mail@zeno-ruefenacht.com</p>
+            </div>
+            <!-- ===== Contact info item end ====== -->
+            <!-- ===== Contact info item start ====== -->
+            <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-globe-europe"></i></div>
+              <h4>Website</h4>
+              <p>www.zeno-ruefenacht.com</p>
+            </div>
+            <!-- ===== Contact info item end ====== -->
+          </div>
+          <h3 class="contact-title padd-15">Schreibe mir eine Email</h3>
+          <!-- ====== Contact Form ====== -->
+          <div class="row">
+            <div class="contact-form padd-15">
+
+              <div class="row">
+                <div class="form-item col-6 padd-15">
+                  <div class="form-group">
+                    <form class="formular" method="POST" action="send.php">
+                      <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                  </div>
+                </div>
+                <div class="form-item col-6 padd-15">
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-item col-12 padd-15">
+                  <div class="form-group">
+                    <textarea class="form-control" id="message" name="message" placeholder="Nachricht"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-item col-12 padd-15">
+                  <button type="submit" value="Senden" class="btn">Nachricht senden</button>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ===== Contact Section End ===== -->
+    </div>
+    <!-- ===== Main Content End ===== -->
+  </div>
+  <!-- ===== Main Container End ===== -->
+  <!-- ===== Style Switcher Start ===== -->
+  <div class="style-switcher">
+    <div class="style-switcher-toggler s-icon">
+      <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night s-icon">
+      <i class="fas "></i>
+    </div>
+    <h4>Farbdesign</h4>
+    <div class="colors">
+      <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+      <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+      <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+      <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+      <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+    </div>
+  </div>
+  <!-- ===== Style Switcher End ===== -->
+  <!-- ===== JS Files ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+    referrerpolicy="no-referrer"></script>
+  <script src="js/script.js"></script>
+  <script src="js/style-switcher.js"></script>
+</body>
+
+</html>
