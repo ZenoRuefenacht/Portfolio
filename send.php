@@ -1,25 +1,26 @@
 <html>
+
 <head>
-     <link rel="icon" href="favicon.png" type="image/x-icon">
-     <title>Erfolgreich versendet</title>
-     <style>
-     a {
-         text-decoration: none;
-         color: turquoise;
-     }
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <title>Erfolgreich versendet</title>
+    <style>
+    a {
+        text-decoration: none;
+        color: turquoise;
+    }
 
-     body {
-         background-color: black;
-         color: white;
-     }
-     </style>
- </head>
+    body {
+        background-color: black;
+        color: white;
+    }
+    </style>
+</head>
 
- <body>
+<body>
 
- </body>
+</body>
 
- <?php
+<?php
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
@@ -37,12 +38,12 @@
 
 
 <script>
-
-    /*var interval = setInterval(myURL, 1);
+/*var interval = setInterval(myURL, 1);
 
     function myURL() {
         document.location.href = 'https://zeno-ruefenacht.com/feedback/';
         clearInterval(interval);
     }*/
 </script>
+
 </html>
