@@ -3,7 +3,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 150) {
         document.getElementById("myBtn").style.display = "block";
     } else {
         document.getElementById("myBtn").style.display = "none";
@@ -11,7 +11,6 @@ function scrollFunction() {
 }
 
 function topFunction() {
-    // Wenn du eine sanfte Scroll-Animation bevorzugst, verwende die folgende Zeile
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
 }

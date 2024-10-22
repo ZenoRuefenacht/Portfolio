@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 :root {
-    --text: #FFFBFE;
-    --background: #0D3B66;
-    --accent: #CAFE48;
+    --text: #040b0f;
+    --background: #f5f9ff;
+    --accent: #2056e0;
 }
 
 :root {
@@ -63,7 +63,8 @@ p {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter Tight', sans-serif;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
     outline: red dashed 1px;
     scroll-behavior: smooth;
     color: var(--text);
@@ -75,10 +76,6 @@ body {
 
 header {
     width: 100vw;
-}
-
-main {
-    margin: 30px
 }
 
 .flex-header {
@@ -114,10 +111,15 @@ nav li.active {
 }
 
 main {
-    padding: 0 20px;
+    padding: 0;
     min-height: 90vh;
+    margin: 50px 20px 0 20px
 }
 
+section {
+    margin: 0;
+    min-height: 20vh;
+}
 
 .fade-in-up {
     opacity: 0;
@@ -144,13 +146,14 @@ main {
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
-    border: solid var(--text) 2px;
+    border: solid var(--accent) 2px;
     transition: 0.7s;
     background-color: transparent;
+
 }
 
 #myBtn:hover {
-    color: var(--text);
+    color: var(--background);
     transition: 0.7s;
     background-color: var(--accent);
 }

@@ -15,7 +15,7 @@
 
     </div>
 
-    <button onclick="topFunction()" id="myBtn" title="Scroll to Top">Top</button>
+    <button onclick="topFunction()" id="myBtn" title="Scroll to Top">↑</button>
 
     <header>
         <?php include './header.php'; ?>
@@ -27,10 +27,28 @@
 </section>
 
     </main>
+        <main>
+<section>
+    
+</section>
+
+    </main>
+        <main>
+<section>
+    
+</section>
+
+    </main>
+        <main>
+<section>
+    
+</section>
+
+    </main>
     <footer>
 
     </footer>
 </body>
-<script src="./js/skript.js"></script>
+<script src="./js/script.js"></script>
 
 </html>
