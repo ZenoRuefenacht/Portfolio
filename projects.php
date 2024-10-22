@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>My Projects</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
 </head>
@@ -20,6 +20,7 @@
     <header>
         <?php include './header.php'; ?>
     </header>
+
 
     <main>
 <section>
