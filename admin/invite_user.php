@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $mail->setFrom('zenoruefenacht1@gmail.com', 'Mein Portfolio');
                     $mail->addAddress($email);
                     $mail->Subject = 'Ihre Einladung zur Registrierung';
-                    $mail->Body    = "Hallo,\n\nSie wurden eingeladen, sich für mein Portfolio zu registrieren.\n\nBitte klicken Sie auf den folgenden Link, um sich zu registrieren:\n\n$inviteLink\n\nViele Grüße";
+                    $mail->Body    = "Hallo,\n\nSie wurden eingeladen, sich für mein Portfolio zu registrieren.\n\nBitte klicken Sie auf den folgenden Link, um sich zu registrieren:\n\n$inviteLink\n\nViele Grüsse,\nZeno";
 
                     if ($mail->send()) {
                         echo "✅ Einladung erfolgreich gesendet an $email.";
@@ -94,5 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </select>
         <button type="submit">Einladung senden</button>
     </form>
+    <a href="dashboard.php">⬅ Zurück zum Admin-Dashboard</a>
+
 </body>
 </html>
