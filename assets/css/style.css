@@ -28,3 +28,34 @@ footer {
 li {
     list-style: none
 }
+.image-slider {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.image-slider img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}

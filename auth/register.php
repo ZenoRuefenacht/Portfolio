@@ -30,6 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Registrierung</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="./android-chrome-192x192.png">
+    <link rel="shortcut icon" href="./android-chrome-192x192.png">
 </head>
 <body>
     <h1>Registrierung</h1>

@@ -40,6 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <link rel="shortcut icon" href="./favicon.png">
 </head>
 <body>
     <h1>Login</h1>

@@ -16,40 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_project"])) {
     }
 }
 
-// Projekt hinzufügen
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_project"])) {
-    $title = $_POST["title"];
-    $description = $_POST["description"];
-    $category = $_POST["category"];
-    $status = $_POST["status"];
-    $visibility = $_POST["visibility"]; // Array von Gruppenberechtigungen
-    $media_url = "";
-
-    if (!empty($_FILES["media"]["name"])) {
-        $target_dir = "../uploads/";
-        $target_file = $target_dir . basename($_FILES["media"]["name"]);
-        if (move_uploaded_file($_FILES["media"]["tmp_name"], $target_file)) {
-            $media_url = $target_file;
-        }
-    }
-
-    // Projekt speichern
-    $stmt = $pdo->prepare("INSERT INTO projects (title, description, category, status, media_url, created_at) VALUES (?, ?, ?, ?, ?, NOW())");
-    if ($stmt->execute([$title, $description, $category, $status, $media_url])) {
-        $project_id = $pdo->lastInsertId();
-
-        // Sichtbarkeit speichern
-        foreach ($visibility as $role) {
-            $stmt = $pdo->prepare("INSERT INTO project_visibility (project_id, access_level) VALUES (?, ?)");
-            $stmt->execute([$project_id, $role]);
-        }
-
-        $message = "✅ Projekt erfolgreich hinzugefügt!";
-    } else {
-        $message = "❌ Fehler beim Speichern.";
-    }
-}
-
 // Alle Projekte abrufen
 $stmt = $pdo->query("SELECT * FROM projects ORDER BY created_at DESC");
 $projects = $stmt->fetchAll();
@@ -70,38 +36,7 @@ $projects = $stmt->fetchAll();
         <p><?= htmlspecialchars($message) ?></p>
     <?php endif; ?>
 
-    <h2>➕ Neues Projekt hinzufügen</h2>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="text" name="title" placeholder="Projekttitel" required>
-        <textarea name="description" placeholder="Projektbeschreibung" required></textarea>
-
-        <label>Kategorie:</label>
-        <select name="category">
-            <option value="video">Video</option>
-            <option value="design">Design</option>
-            <option value="website">Website</option>
-            <option value="other">Sonstiges</option>
-        </select>
-
-        <label>Status:</label>
-        <select name="status">
-            <option value="in_progress">In Bearbeitung</option>
-            <option value="completed">Abgeschlossen</option>
-        </select>
-
-        <label>Sichtbarkeit (Mehrfachauswahl möglich):</label>
-        <select name="visibility[]" multiple required>
-            <option value="public">Öffentlich</option>
-            <option value="client">Nur Kunden</option>
-            <option value="recruiter">Nur Recruiter</option>
-            <option value="familyandfriends">Nur Familie & Freunde</option>
-        </select>
-
-        <label>Medien (optional, Bild/Video):</label>
-        <input type="file" name="media" accept="image/*,video/*">
-
-        <button type="submit" name="add_project">Projekt speichern</button>
-    </form>
+    <a href="add_project.php">➕ Neues Projekt hinzufügen</a>
 
     <h2>📂 Bestehende Projekte</h2>
     <ul>
@@ -110,8 +45,29 @@ $projects = $stmt->fetchAll();
                 <h2><?= htmlspecialchars($project['title']) ?></h2>
                 <p><?= htmlspecialchars(substr($project['description'], 0, 100)) ?>...</p>
 
-                <?php if (!empty($project["media_url"])): ?>
-                    <img src="<?= htmlspecialchars($project["media_url"]) ?>" alt="Projektbild" style="max-width: 200px;">
+                <?php
+                // Sichtbarkeiten abrufen
+                $stmt = $pdo->prepare("SELECT access_level FROM project_visibility WHERE project_id = ?");
+                $stmt->execute([$project['id']]);
+                $roles = $stmt->fetchAll(PDO::FETCH_COLUMN);
+
+                // Bilder abrufen
+                $stmt = $pdo->prepare("SELECT id, image_url FROM project_images WHERE project_id = ?");
+                $stmt->execute([$project['id']]);
+                $images = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                ?>
+
+                <p><strong>Sichtbar für:</strong> <?= implode(", ", $roles) ?></p>
+
+                <!-- Bildvorschau -->
+                <?php foreach ($images as $image): ?>
+                    <div style="display: inline-block; margin-right: 10px;">
+                        <img src="<?= htmlspecialchars($image['image_url']) ?>" alt="Projektbild" style="width: 100px;">
+                    </div>
+                <?php endforeach; ?>
+
+                <?php if (!empty($project["project_link"])): ?>
+                    <p><a href="<?= htmlspecialchars($project["project_link"]) ?>" target="_blank">🔗 Projekt-Link</a></p>
                 <?php endif; ?>
 
                 <form method="POST" style="display:inline;">
