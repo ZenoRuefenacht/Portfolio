@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $description = $_POST["description"];
     $category = $_POST["category"];
     $status = $_POST["status"];
-    $visibility = $_POST["visibility"] ?? []; 
+    $visibility = $_POST["visibility"] ?? []; // Checkbox-Werte
     $project_link = $_POST["project_link"] ?? ""; 
 
     // Projekt speichern
@@ -63,6 +63,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="POST" enctype="multipart/form-data">
         <input type="text" name="title" placeholder="Projekttitel" required>
         <textarea name="description" placeholder="Projektbeschreibung" required></textarea>
+
+        <label>Kategorie:</label>
+        <select name="category">
+            <option value="video">Video</option>
+            <option value="design">Design</option>
+            <option value="website">Website</option>
+            <option value="other">Sonstiges</option>
+        </select>
+
+        <label>Status:</label>
+        <select name="status">
+            <option value="in_progress">In Bearbeitung</option>
+            <option value="completed">Abgeschlossen</option>
+        </select>
+
         <label>Projekt-Link (optional):</label>
         <input type="url" name="project_link" placeholder="https://beispiel.com">
 
@@ -72,6 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="checkbox" name="visibility[]" value="client"> Nur Kunden<br>
             <input type="checkbox" name="visibility[]" value="recruiter"> Nur Recruiter<br>
             <input type="checkbox" name="visibility[]" value="familyandfriends"> Nur Familie & Freunde<br>
+            <input type="checkbox" name="visibility[]" value="private"> Privat (Nur Admins)<br>
         </div>
 
         <label>Medien (mehrere Bilder möglich):</label>

@@ -115,12 +115,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_image"])) {
         <input type="url" name="project_link" value="<?= htmlspecialchars($project['project_link']) ?>" placeholder="Projekt-Link">
 
         <label>Sichtbarkeit:</label>
-        <div>
-            <input type="checkbox" name="visibility[]" value="public" <?= in_array('public', $visibility) ? 'checked' : '' ?>> Öffentlich<br>
-            <input type="checkbox" name="visibility[]" value="client" <?= in_array('client', $visibility) ? 'checked' : '' ?>> Nur Kunden<br>
-            <input type="checkbox" name="visibility[]" value="recruiter" <?= in_array('recruiter', $visibility) ? 'checked' : '' ?>> Nur Recruiter<br>
-            <input type="checkbox" name="visibility[]" value="familyandfriends" <?= in_array('familyandfriends', $visibility) ? 'checked' : '' ?>> Nur Familie & Freunde<br>
-        </div>
+<div>
+    <input type="checkbox" name="visibility[]" value="public" <?= in_array('public', $visibility) ? 'checked' : '' ?>> Öffentlich<br>
+    <input type="checkbox" name="visibility[]" value="client" <?= in_array('client', $visibility) ? 'checked' : '' ?>> Nur Kunden<br>
+    <input type="checkbox" name="visibility[]" value="recruiter" <?= in_array('recruiter', $visibility) ? 'checked' : '' ?>> Nur Recruiter<br>
+    <input type="checkbox" name="visibility[]" value="familyandfriends" <?= in_array('familyandfriends', $visibility) ? 'checked' : '' ?>> Nur Familie & Freunde<br>
+    <input type="checkbox" name="visibility[]" value="private" <?= in_array('private', $visibility) ? 'checked' : '' ?>> Privat (Nur Admins)<br>
+</div>
+
 
         <label>Neue Bilder hinzufügen:</label>
         <input type="file" name="images[]" multiple accept="image/*">

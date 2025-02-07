@@ -1,7 +1,7 @@
 <?php
 include '../includes/config.php';
 session_start();
-include '../views/header.php';
+include '../views/header.php'; 
 
 $role = $_SESSION["role"] ?? "public";
 
@@ -26,7 +26,6 @@ $projects = $stmt->fetchAll();
     <meta charset="UTF-8">
     <title>Projekte</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="../assets/js/slider.js" defer></script>
     <style>
         .image-slider {
             position: relative;
@@ -69,26 +68,17 @@ $projects = $stmt->fetchAll();
                     <p><?= htmlspecialchars(substr($project['description'], 0, 100)) ?>...</p>
 
                     <?php
-                    $stmt = $pdo->prepare("SELECT image_url FROM project_images WHERE project_id = ?");
+                    $stmt = $pdo->prepare("SELECT access_level FROM project_visibility WHERE project_id = ?");
                     $stmt->execute([$project['id']]);
-                    $images = $stmt->fetchAll(PDO::FETCH_COLUMN);
+                    $roles = $stmt->fetchAll(PDO::FETCH_COLUMN);
                     ?>
 
-                    <?php if ($images): ?>
-                        <div class="image-slider">
-                            <?php foreach ($images as $image): ?>
-                                <img src="<?= htmlspecialchars($image) ?>" alt="Projektbild">
-                            <?php endforeach; ?>
-                            <div class="slider-controls">
-                                <button class="prev">⬅</button>
-                                <button class="next">➡</button>
-                            </div>
-                        </div>
+                    <?php if ($role !== "admin" && in_array("private", $roles)): ?>
+                        <!-- Private Projekte sind für andere nicht sichtbar -->
+                        <?php continue; ?>
                     <?php endif; ?>
 
-                    <?php if (!empty($project["project_link"])): ?>
-                        <p><a href="<?= htmlspecialchars($project["project_link"]) ?>" target="_blank">🔗 Projekt-Link</a></p>
-                    <?php endif; ?>
+                    <p><strong>Sichtbar für:</strong> <?= implode(", ", $roles) ?></p>
 
                     <a href="project_detail.php?id=<?= $project['id'] ?>">🔍 Mehr erfahren</a>
                 </li>
