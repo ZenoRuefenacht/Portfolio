@@ -1,12 +1,14 @@
 <?php
 include '../includes/config.php';
-include '../views/header.php';
-session_start();
+include '../includes/lang.php';
 
 $role = $_SESSION["role"] ?? "public";
+
+include '../views/header.php';
 ?>
-<h1>Über mich</h1>
-<p>Ich bin [Dein Name], ein leidenschaftlicher [Berufsbezeichnung].</p>
+<main>
+<h1><?= t('about') ?></h1>
+<p><?= t('about_intro') ?></p>
 
 <?php if ($role == "recruiter"): ?>
     <h2>Berufliche Details</h2>
@@ -21,4 +23,5 @@ $role = $_SESSION["role"] ?? "public";
     <p>Mehr Infos erhalten Sie nach Anmeldung.</p>
 <?php endif; ?>
 
+</main>
 <?php include '../views/footer.php'; ?>

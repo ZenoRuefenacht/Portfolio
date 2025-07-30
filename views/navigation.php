@@ -1,9 +1,8 @@
-<?php session_start(); ?>
 <nav>
-    <a href="../index.php">Home</a>
-    <a href="../pages/about.php">Über mich</a>
-    <a href="../pages/projects.php">Projekte</a>
-    <a href="../pages/contact.php">Kontakt</a>
+    <a href="../index.php"><?= t('home') ?></a>
+    <a href="../pages/about.php"><?= t('about') ?></a>
+    <a href="../pages/projects.php"><?= t('projects') ?></a>
+    <a href="../pages/contact.php"><?= t('contact') ?></a>
 
     <?php if (isset($_SESSION["user_id"])): ?>
         <?php if ($_SESSION["role"] == 'admin'): ?>
@@ -19,8 +18,8 @@
             <a href="../pages/familyandfriends.php">Familie & Freunde</a>
         <?php endif; ?>
 
-        <a href="../auth/logout.php">Logout</a>
+        <a href="../auth/logout.php"><?= t('logout') ?></a>
     <?php else: ?>
-        <a href="../auth/login.php">Login</a>
+        <a href="../auth/login.php"><?= t('login') ?></a>
     <?php endif; ?>
 </nav>
